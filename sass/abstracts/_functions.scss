@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "variables" as vars;
+
+@function color($key) {
+  @if not map.has-key(vars.$colors, $key) {
+    @error "Color #{$key} not found in $colors";
+  }
+
+  @return map.get(vars.$colors, $key);
+}
+
+@function space($key){
+  @if not map.has-key(vars.$spacers, $key){
+    @error "Space #{$key} not found in $spacers";
+  }
+  @else{
+    @return map.get(vars.$spacers, $key);
+  }
+}
+
+@function font-size($key) {
+  @if not map.has-key(vars.$type-scale, $key) {
+    @error "Unknown type-scale key: #{$key}.";
+  }
+  @return map.get(vars.$type-scale, $key);
+}
+
+@function radius($key) {
+  @return map.get(vars.$radius, $key);
+}

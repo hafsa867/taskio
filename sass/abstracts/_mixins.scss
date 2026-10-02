@@ -1,0 +1,37 @@
+@use "sass:map";
+@use "variables" as vars;
+
+@mixin responsive($bp) {
+  @if map.has-key(vars.$breakpoints, $bp) {
+    @media (min-width: map.get(vars.$breakpoints, $bp)) {
+      @content;
+    }
+  }
+  @else {
+    @error "Breakpoint #{$bp} not found in $breakpoints";
+  }
+}
+
+
+@mixin flex-row($justify: flex-start, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-col($justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-center($gap: 0) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}

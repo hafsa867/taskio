@@ -1,0 +1,72 @@
+@use "sass:color";
+
+$color-bg: #52BDAA;
+$color-light: #A6A6A6;
+$color-ink: #161C28 ;
+$color-accent:#222938 ;
+$color-white: white;
+
+
+$colors: (
+  "bg": $color-bg,
+  "light": $color-light,
+  "ink": $color-ink,
+  "accent": $color-accent,
+  "white":$color-white ,
+);
+
+$font-family: "Inter", sans-serif;
+
+
+
+$font-base: 16px;
+
+$type-scale: (
+    "xs": 0.75rem,
+    "sm": 0.875rem,
+    "base": 1rem,
+    "lg": 1.125rem,
+    "xl": 1.25rem,
+    "2xl": 1.5rem,
+    "3xl": 1.875rem,
+    "4xl": 2.25rem,
+    "5xl": 3rem,
+);
+
+$space-unit: 0.25rem;
+$spacers: (
+  "1": $space-unit,
+  "2": 8px,
+  "3": 16px,
+  "4": 24px,
+  "5": $space-unit * 8,
+  "6": $space-unit * 12,
+);
+
+
+
+$type-scale: (
+  "xs": 0.75rem,
+  "sm": 0.875rem,
+  "md": 1rem,
+  "lg": 1.125rem,
+  "xl": 1.25rem,
+  "2xl": 1.5rem,
+  "3xl": 1.875rem,
+  "4xl": 2.25rem,
+  "5xl": 3rem
+);
+
+$radius: (
+  "sm": 4px,
+  "md": 8px,
+  "lg": 16px,
+);
+
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+);
+
