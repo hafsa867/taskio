@@ -1,0 +1,163 @@
+
+
+@use "sass:map";
+@use "../abstracts" as *;
+
+.container{
+  background-color: $color-bg;
+}
+.navbar {
+  background-color: transparent;
+
+  .nav-logo {
+    color: map.get($colors, "logo"); 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
+    font-size: map.get($type-scale, "3xl"); 
+    cursor: pointer;
+  }
+}
+
+.nav-links {
+  li {
+    a {
+      font-family: $font-family; 
+      font-weight: 500;
+      color: map.get($colors, "light"); 
+      font-size: map.get($type-scale, "md"); 
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover, &.active {
+        color: map.get($colors, "ink"); 
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.nav-actions {
+  .btn-login {
+    background: none;
+    border: none;
+    color: map.get($colors, "light"); 
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: map.get($type-scale, "md");
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: map.get($colors, "ink");
+    }
+  }
+
+  .btn-signup {
+    background-color: map.get($colors, "logo"); 
+    border: none;
+    color: map.get($colors, "white"); 
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: map.get($type-scale, "md");
+    padding: map.get($spacers, "2") map.get($spacers, "4"); 
+    border-radius: 40px; 
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-1px); 
+    }
+  }
+}
+
+// ==========================================
+// 2. HERO SECTION COMPONENTS STYLING
+// ==========================================
+.hero-content {
+  .hero-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: map.get($type-scale, "5xl"); // Figma ke mutabik barha text size (3rem)
+    color: map.get($colors, "ink");
+    line-height: 1.2;
+    margin: 0;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      // Agar heading wali decorative line thodi bari ho rahi ho to isko scale kar sakti hain
+    }
+  }
+
+  .hero-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: map.get($type-scale, "md"); 
+    color: map.get($colors, "light");
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    font-family: $font-family;
+    color: map.get($colors, "light");
+    font-weight: 500;
+
+    // Green Solid Pill Button
+    .btn-trial {
+      background-color: map.get($colors, "logo");
+      border: none;
+      color: map.get($colors, "white");
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: map.get($type-scale, "md");
+      padding: map.get($spacers, "3") map.get($spacers, "4"); // Thodi bari padding 'Try free trial' ke liye
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0px 4px 12px rgba(83, 217, 179, 0.2); // Figma style shadow
+      transition: opacity 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+    }
+
+    // View Demo text container style
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.hero-graphics {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// ==========================================
+// 3. LAST SECTION (LOGOS) COMPONENTS STYLING
+// ==========================================
+.last-section {
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: map.get($type-scale, "3xl"); // Bold centered heading
+    color: map.get($colors, "ink");
+  }
+
+  .brand-logos {
+    img {
+      filter: grayscale(100%); // Logos ko perfect gray filter dene ke liye
+      opacity: 0.6; // Muted display jaisa figma mein hai
+      transition: filter 0.3s, opacity 0.3s;
+
+      &:hover {
+        filter: grayscale(0%); // Hover karne par real colors show honge
+        opacity: 1;
+      }
+    }
+  }
+}

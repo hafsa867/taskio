@@ -1,0 +1,26 @@
+{
+  "name": "taskio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "sass:build": "sass sass/main.scss css/main.css --style=expanded --source-map",
+  "sass:watch": "sass sass/main.scss css/main.css --watch --source-map",
+  "sass:prod": "sass sass/main.scss css/main.css --style=compressed --no-source-map"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafsa867/taskio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {"url": "https://github.com/hafsa867/taskio/issues"
+  },
+  "homepage": "https://github.com/hafsa867/taskio#readme",
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}

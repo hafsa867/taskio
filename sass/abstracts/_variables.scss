@@ -1,6 +1,8 @@
 @use "sass:color";
 
-$color-bg: #52BDAA;
+
+$color-bg: #a7ece0;
+$color-logo: #53d9b3;
 $color-light: #A6A6A6;
 $color-ink: #161C28 ;
 $color-accent:#222938 ;
@@ -12,7 +14,8 @@ $colors: (
   "light": $color-light,
   "ink": $color-ink,
   "accent": $color-accent,
-  "white":$color-white ,
+  "white":$color-white,
+  "logo": $color-logo,
 );
 
 $font-family: "Inter", sans-serif;
@@ -39,8 +42,10 @@ $spacers: (
   "2": 8px,
   "3": 16px,
   "4": 24px,
-  "5": $space-unit * 8,
+  "5": 50px,
   "6": $space-unit * 12,
+  "7": 20px,
+
 );
 
 
