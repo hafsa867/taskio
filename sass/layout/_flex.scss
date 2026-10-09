@@ -2,12 +2,16 @@
 @use "sass:map";
 @use "../abstracts" as *;
 
+
+
+
+
 .navbar {
   @include flex-row;         
   justify-content: space-between;
   align-items: center;
   padding: map.get($spacers, "4") map.get($spacers, "5");
-  width: 100%;
+
 
   .nav-links {
     @include flex-row;       
@@ -49,17 +53,74 @@
     }
   }
 }
+
 .last-section {
-  @include flex-row;         
+  @include flex-col;         
   justify-content: space-between;
   align-items: center;
   padding: map.get($spacers, "5");
   width: 100%;
+  row-gap: map.get($spacers, "7");
   flex-wrap: wrap;
 
-  .brand-logos {
-    @include flex-row;      
-   gap: map.get($spacers, "4");
+  
+
+  .brand-logos{
+        @include flex-row; 
+   gap: map.get($spacers, "6");
     align-items: center;
+    opacity: 0.6;
+    
   }
+}
+
+
+
+
+.container2 {
+  @include flex-center; 
+  width: 100%;
+.content-column {
+    @include flex-col(flex-start, flex-start, 24px);
+    .ratings-part {
+      @include flex-row(flex-start, center, 40px);
+
+      @media (max-width: 576px) {
+        @include flex-col(flex-start, center, 24px);
+      }
+
+      .rating-card {
+        @include flex-col(flex-start, flex-start, 8px);
+      }
+    }
+  }
+
+  .features-column {
+  
+    @include flex-col(flex-start, stretch, 32px);
+
+    .Publishing, .Analytics, .Engagement {
+      @include flex-row(flex-start, flex-start, 20px);
+      
+      img {
+flex-shrink: 0;
+      }
+    }
+
+    .Plan, .Analyze, .engage {
+      @include flex-col(flex-start, flex-start, 6px);
+    }
+  }
+}
+
+.features{
+  .section1{
+    @include flex-row;
+  }
+}
+.features-cards{
+   @include flex-row;
+   .card{
+     @include flex-col;
+   }
 }

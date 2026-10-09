@@ -1,11 +1,13 @@
 @use "../abstracts" as *;
  :root {
-  --color-bg: #{color("bg")};
+  --color-bg: #{$color-bg};
   --color-light: #{color("light")};
   --color-ink: #{color("ink")};
   --color-accent: #{color("accent")};
   --color-white: #{color("white")};
   --color-logo: #{color("logo")};
+  --color-ice: #{color("ice")};
+   
   
 }
 
