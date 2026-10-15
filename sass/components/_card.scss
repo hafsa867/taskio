@@ -3,9 +3,12 @@
 @use "sass:map";
 @use "../abstracts" as *;
 
+
+
+
 .container1{
   background: $color-bg;
-  padding: 0 20px;
+padding: 0 20px;
   
 }
 .navbar {
@@ -156,16 +159,15 @@
 }
 
 .container2{
-  padding: 30px  10px;
+  padding: 30px 80px;
   background-color:map.get($colors, "ice") ;
-  
-  
   .content-column{
     
     width: 644px;
     h2{
       
-    font-family: $font-family;
+    font-family:$font-family;
+    font-weight: Semi Bold;
     }
     p{
       color: map.get($colors, "light");
@@ -191,9 +193,45 @@
   }
 }
 
-.container3{
-  .features{
-    width: 1180px;
-    height: 766px;
-  }
+.container3 {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #ffffff;
+
+    .section1 {
+      margin-bottom: 50px;
+  
+    h1{
+      font-family: $font-family;
+      
+    }
+    p{
+      color: map.get($colors, "light");
+    }
+    button {
+    background-color:map.get($colors, "logo") ; /* Figma ka green color */
+    color:map.get($colors, "white");
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px; 
+}
+}
+}
+
+.text-column{
+  gap: 40px;                      
+    width: 100%;
+    max-width: 1180px;             
+    margin: 24px auto 0 auto;       
+    padding: 0 20px;
+    box-sizing: border-box;
+h3{
+  font-family: $font-family;
+}
+p{
+  color: map.get($colors, "light");
+}
 }

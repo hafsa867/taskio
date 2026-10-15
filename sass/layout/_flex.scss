@@ -55,7 +55,7 @@
 }
 
 .last-section {
-  @include flex-col;         
+          @include flex-row; 
   justify-content: space-between;
   align-items: center;
   padding: map.get($spacers, "5");
@@ -82,6 +82,7 @@
   width: 100%;
 .content-column {
     @include flex-col(flex-start, flex-start, 24px);
+    justify-content: space-between;
     .ratings-part {
       @include flex-row(flex-start, center, 40px);
 
@@ -111,16 +112,36 @@ flex-shrink: 0;
       @include flex-col(flex-start, flex-start, 6px);
     }
   }
-}
-
-.features{
+   }
+  
+  
+.container3{
+  @include flex-row;
+  
   .section1{
     @include flex-row;
+    justify-content: space-between
   }
+  .cards{
+    @include flex-row;
+    gap: 30px;
+  }
+
+  .features-text-container {
+     @include flex;
+    justify-content: space-between; 
+    gap: 30px;
+    .text-column {
+    flex: 1; 
+    text-align: left; 
+    margin-top: 30px;
+    gap: 40px; 
+   @include flex-col;
+gap:10px;
 }
-.features-cards{
-   @include flex-row;
-   .card{
-     @include flex-col;
-   }
 }
+}
+
+
+
+

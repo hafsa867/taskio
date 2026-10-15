@@ -29,9 +29,13 @@
   gap: $gap;
 }
 
-@mixin flex-center($gap: 0) {
+@mixin flex-center{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: $gap;
+  flex-direction: row;
+  gap: 20px;
+     }
+@mixin flex{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
