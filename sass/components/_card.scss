@@ -235,3 +235,21 @@ p{
   color: map.get($colors, "light");
 }
 }
+
+.features2{
+  
+  padding: 0 80px;
+  .Benifits-content{
+    gap: 20px;
+    h1{
+      font-family: $font-family;
+    }
+    .Benifits-list{
+      font-family: $font-family;
+      font-weight: 500;
+    }
+  }
+  .img{
+    
+  }
+}

@@ -144,4 +144,26 @@ gap:10px;
 
 
 
+.features2{
+   @include flex-row;
+    justify-content: space-between;
+    gap: 200px;
+   .Benifits-content{
+    @include flex-col;
+    gap: 20px;
+    .Benifits-list{
+      @include flex-row;
+      gap: 20px;
+    }
+  }
+  .img{
+
+  
+  img{
+  
+    height: 550px;
+  }
+
+  }
+}
 
