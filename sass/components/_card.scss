@@ -67,6 +67,7 @@ padding: 0 20px;
 
 
 .hero-content {
+  
   .hero-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -86,7 +87,7 @@ padding: 0 20px;
     font-family: $font-family;
     font-weight: 400;
     font-size: map.get($type-scale, "md"); 
-    color: map.get($colors, "light");
+    color: map.get($colors, "ink");
     line-height: 1.6;
   }
 
@@ -123,27 +124,10 @@ padding: 0 20px;
 
 
 
-.last-section {
-
-  h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: map.get($type-scale, "3xl"); 
-    color: map.get($colors, "ink");
-    text-align: center;
-  }
-   .hero-graphics{
-    margin-right: auto;
-   }
-  
-
-} 
 
 
-// Layout properties ko chhede bina, sirf colors aur typography maps use kiye hain:
 
 
-// Last Section Styling (Jo image mein khuli hui thi)
 .last-section {
   h2 {
     font-family: 'Poppins', sans-serif;
@@ -159,7 +143,7 @@ padding: 0 20px;
 }
 
 .container2{
-  padding: 30px 80px;
+  padding: 50px 80px;
   background-color:map.get($colors, "ice") ;
   .content-column{
     
@@ -252,4 +236,69 @@ p{
   .img{
     
   }
+}
+
+
+
+
+
+.pricing-header {
+  text-align: center;
+  padding: 60px ;
+  font-family: 'Inter', sans-serif; 
+
+
+
+.pricing-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.pricing-subtitle {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plan-toggle {
+  background-color: white; 
+  padding: 4px;
+  border-radius: 8px;
+.toggle-btn {
+  padding: 8px 16px;
+  border: none;
+  background:transparent;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.toggle-btn.active {
+  background-color:#52BD94 ; 
+  color:white;
+}
+
+ }
+
+.pricing-card {
+  
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+.img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+}
+
 }
